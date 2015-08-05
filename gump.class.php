@@ -325,7 +325,7 @@ class GUMP
 			$rules = explode('|', $rules);
 		
                     $is_empty = true;
-                    if (!is_array($input[$field])) {
+                    if (isset($input[$field]) && !is_array($input[$field])) {
                         $is_empty = isset($input[$field]) && trim($input[$field]) != '';
                     }    
                         
